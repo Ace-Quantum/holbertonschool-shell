@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((grep -v "oo"))
+echo {a..o}{a..o} | tr [:space:] "\n" | grep -v "oo"
