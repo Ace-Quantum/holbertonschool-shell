@@ -1,2 +1,2 @@
 #!/bin/bash
-echo grep -v "oo"
+echo $((grep -v "oo"))
