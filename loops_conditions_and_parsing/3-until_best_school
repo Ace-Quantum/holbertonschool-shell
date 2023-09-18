@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#a script to practice until loops
+x=1
+until ((x=11))
+do
+	echo "Best School"
+	((x++))
+done
