@@ -1,5 +1,5 @@
-#!/user/bin/env bash
-#This loop will display 'Best School' 10 times
+#!/usr/bin/env bash
+#First loop. It's a for loop to print "best school" 10 times
 for i in {1..10}
 do
 	echo "Best School"
