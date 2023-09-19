@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#made code to scrape and format data from the passwd directory
+
+passwd_file="/etc/passwd"
+
+while IFS=: read -r username _ uid _ _ home _; do
+echo "Username: $username"
+echo "User ID: $uid"
+echo "Home Directory: $home"
+echo
+done < "$passwd_file"
