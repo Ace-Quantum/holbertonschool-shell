@@ -3,15 +3,8 @@
 
 passwd_file="/etc/passwd"
 
-while IFS=: read -r username _ uid gid info home shell; do
-	IFS=',' read -ra info_fields <<< "$info"
-	full_name="${info_fields[0]}"
-	group="${info_fields[1]}"
-	password="${info_fields[2]}"
-
-	echo "The user $username is part of the $group gang,"
-	echo "lives in $home and rides $shell."
-	echo "USER ID's place is protected by the passcode $password,"
-	echo "more info about the user here: $full_name"
+while IFS=: read -r username password uid gid user_info home shell; do
+	echo "The user $username is part of the $gid gang, lives in $home and rides $shell."
+	echo "USER ID's place is protected by the passcode $password, more info about the user here: $full_name"
 	echo
 done < "$passwd_file"
