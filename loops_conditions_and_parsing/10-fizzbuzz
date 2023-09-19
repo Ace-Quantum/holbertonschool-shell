@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# loop through numbers and understand multiples
+
+fizzbuzz_list=()
+
+for x in {1..100}
+do
+	if [ "$((x % 15))" -eq 0 ]; then
+		fizzbuzz_list+=("FizzBuzz")
+	elif [ "$((x % 3))" -eq 0 ]; then
+		fizzbuzz_list+=("Fizz")
+	elif [ "$((x % 5))" -eq 0 ]; then
+		fizzbuzz_list+=("Buzz")
+	else
+		fizzbuzz_list+=("$x")
+	fi
+done
+
+for item in "${fizzbuzz_list[@]}"
+do
+	echo "$item"
+done
