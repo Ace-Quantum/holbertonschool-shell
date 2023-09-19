@@ -4,7 +4,7 @@
 passwd_file="/etc/passwd"
 
 while IFS=: read -r username _ uid gid info home shell; do
-	IFS=',' read -ra info_fields<<< "$info"
+	IFS=',' read -ra info_fields <<< "$info"
 	full_name="${info_fields[0]}"
 	group="${info_fields[1]}"
 	password="${info_fields[2]}"
