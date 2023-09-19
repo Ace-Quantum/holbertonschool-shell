@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#A script to practice looping through files
+file_names=()
+for file in *
+do
+	if [ -f "$file" ] && [[ "$file" != .* ]]
+	then
+		name_without_dash="${file#*-}"
+		file_names+=("$name_without_dash")
+	fi
+done
+
+for name in "${file_names[@]}"
+do
+	echo "$name"
+done
